@@ -205,7 +205,7 @@ public struct SECP256R1PrivateKey: PrivateKeyProtocol {
     }
 
     /// Normalize the Signature to conform with the P256 signature standard.
-    private func normalizeSignature(_ signatureHex: String) -> Data {
+    public func normalizeSignature(_ signatureHex: String) -> Data {
         let curveOrder = BigInt("FFFFFFFF00000000FFFFFFFFFFFFFFFFBCE6FAADA7179E84F3B9CAC2FC632551", radix: 16)!
 
         // Assuming the signature is evenly split between r and s

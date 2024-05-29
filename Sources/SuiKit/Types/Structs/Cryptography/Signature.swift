@@ -45,7 +45,7 @@ public struct Signature: Equatable, KeyProtocol {
     ///   - signature: The actual cryptographic signature as `Data`.
     ///   - publickey: The public key as `Data`.
     ///   - signatureScheme: The signature scheme used (default is `.ED25519`).
-    init(signature: Data, publickey: Data, signatureScheme: SignatureScheme = .ED25519) {
+    public init(signature: Data, publickey: Data, signatureScheme: SignatureScheme = .ED25519) {
         self.signature = signature
         self.publicKey = publickey
         self.signatureScheme = signatureScheme
